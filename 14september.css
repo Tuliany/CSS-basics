@@ -1,0 +1,16 @@
+article {
+  width: 200px;
+  float: left;
+  background-color: darkgray;
+}
+
+main {
+  background-color: lightgray;
+  border: 1px solid black;
+}
+
+.clearfix:after {
+content: "";
+display: table;
+clear: both;
+}

@@ -1,0 +1,70 @@
+$theme-font-size: 24px;
+$theme-color: orange;
+
+article {
+  border: 3px dotted green;
+
+  h1 {
+    color: lighten($theme-color, 10%);
+    font-size: $theme-font-size;
+  }
+
+  p {
+    font-size: (12/10) * 1em;
+
+    a {
+      color: green;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/*
+.dialog {
+  border: 10px solid gray;
+  padding: 10px;
+  h3 {
+    color: gray;
+  }
+}
+
+
+.danger-dialog {
+  @extend .dialog;
+  border-color:red;
+  h3 {
+    color: red;
+  }
+}
+
+*/
+
+@mixin dialog($border-color: gray, $text-color: gray) {
+  border: 10px solid $border-color;
+  padding: 10px;
+  color: $text-color;
+}
+
+.example-dialog {
+  @include dialog(green, green);
+}
+
+.danger-dialog {
+  @include dialog(red, red);
+}
+
+@if (lightness(blue) > 50%) {
+  * {
+    background-color: green;
+  }
+}
+
+@else {
+  * {
+    background: blue;
+  }
+}
